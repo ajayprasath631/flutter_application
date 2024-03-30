@@ -8,7 +8,10 @@
 // Visit https://flutter.dev/docs/cookbook/testing/widget/introduction for
 // more information about Widget testing.
 
+// 🐦 Flutter imports:
 import 'package:flutter/material.dart';
+
+// 📦 Package imports:
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {

@@ -1,5 +1,7 @@
+// 🐦 Flutter imports:
 import 'package:flutter/material.dart';
 
+// 🌎 Project imports:
 import 'settings_controller.dart';
 
 /// Displays the various settings that can be customized by the user.

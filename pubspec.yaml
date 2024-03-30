@@ -1,5 +1,5 @@
 name: flutter_application
-description: "A new Flutter project."
+description: "Flutter State Management"
 
 # Prevent accidental publishing to pub.dev.
 publish_to: 'none'
@@ -8,25 +8,42 @@ version: 1.0.0+1
 
 environment:
   sdk: '>=3.3.1 <4.0.0'
+  flutter: "3.19.3"
 
 dependencies:
   flutter:
     sdk: flutter
   flutter_localizations:
     sdk: flutter
+  flutter_dotenv: 5.1.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  import_sorter: 4.6.0
+  import_path_converter: 1.0.1
+  flutter_lints: 3.0.0
 
-  flutter_lints: ^3.0.0
+import_sorter:
+  emojis: true # Optional, defaults to false
+  comments: true # Optional, defaults to true
+  ignored_files: # Optional, defaults to []
+    - \/lib/generated\/*
+    - \/lib/firebase_generated\/*
+
+import_path_converter:
+  relative: true # Select relative path import or package import(default: false)
+  ignored_files: # Add files to ignore(default: [])
+    - \/lib/generated\/*
+    - \/lib/firebase_generated\/*
 
 flutter:
   uses-material-design: true
-
   # Enable generation of localized Strings from arb files.
   generate: true
 
   assets:
     # Add assets from the images directory to the application.
     - assets/images/
+    - env/.env.dev
+    - env/.env.prod
